@@ -1,50 +1,94 @@
-# job-aggregator
+Job Scraper (Germany)
 
-This project is a simple Puppeteer-based job scraper for Germany, covering Indeed, Glassdoor, XING Jobs, and Arbeitsagentur. It is intended for educational and personal job search use only.
+This project is a simple Puppeteer-based job scraper for Germany, covering Indeed, Glassdoor, XING Jobs, and Arbeitsagentur.  
+It is intended for educational and personal job search use only.
 
-Installation:
-  Step 1: Install Node.js
-    1. Go to https://nodejs.org/ and download the latest LTS version for your system.
-    2. Follow the installer instructions to install Node.js.
-    3. Open a terminal (Command Prompt on Windows, Terminal on Mac) and check installation by typing:
-       - `node -v` (should display Node.js version)
-       - `npm -v` (should display npm version)
+---
 
-  Step 2: Install project dependencies
-    1. Open the terminal and navigate to the folder where you downloaded this project using `cd path-to-project-folder`.
-    2. Run `npm install` to install Puppeteer and other dependencies from `package.json`.
+Installation
 
-Usage:
-  Step 1: Run the scraper
-    1. In the terminal inside the project folder, type `npm start` or `node index.js`.
-    2. Wait a few seconds while the scraper loads each website.
-    3. After completion, the results will appear in JSON format in the terminal.
+Step 1: Install Node.js
 
-Configuration:
-  Step 1: Change job query and location
-    1. Open `index.js` in a text editor (VS Code, Notepad, etc.).
-    2. Find the lines near the top:
-       ```js
-       const query = 'Frontend Developer';
-       const location = 'Berlin';
-       ```
-    3. Replace the values inside quotes with the job title and city you want, for example:
-       ```js
-       const query = 'UX Designer';
-       const location = 'Hamburg';
-       ```
-    4. Save the file.
-  
-  Step 2: Run again
-    1. In the terminal, rerun `npm start` or `node index.js`.
-    2. The scraper will now fetch jobs based on your new query and location.
+- Go to https://nodejs.org/ and download the latest LTS version.
+- Follow the installer instructions.
+- After installation, open a terminal:
+  - On Windows: Command Prompt or PowerShell
+  - On macOS: Terminal
 
-Notes:
-  - Run sparingly; do not run multiple scrapers at the same time to avoid being blocked.
-  - Some websites may detect automated access and block it temporarily.
-  - LinkedIn is not included because it actively prevents scraping.
-  - If a website changes its structure, the scraper may fail until the code is updated.
-  - Always verify that the JSON output matches your expectations.
+- Verify installation by running:
+  - `node -v`
+  - `npm -v`
 
-License:
-  MIT License. You are free to use, modify, and share this project.
+You should see version numbers for both commands.
+
+Step 2: Install project dependencies
+
+- Open a terminal.
+- Navigate to the project folder:
+  - `cd path-to-project-folder`
+- Run:
+  - `npm install`
+
+This installs Puppeteer and all required dependencies listed in `package.json`.
+
+---
+
+Usage
+
+Step 1: Run the scraper
+
+- Make sure you are inside the project folder.
+- Run one of the following commands:
+  - `npm start`
+  - or `node index.js`
+
+Step 2: View results
+
+- The scraper will run for a few seconds.
+- Job results will be printed directly in the terminal as JSON.
+
+---
+
+Configuration
+
+Step 1: Change job title and location
+
+- Open the file `index.js` in a text editor (VS Code, Notepad, etc.).
+- Find the lines near the top:
+
+  `const query = 'Frontend Developer';`  
+  `const location = 'Berlin';`
+
+- Change them to your desired job and city, for example:
+
+  `const query = 'UX Designer';`  
+  `const location = 'Munich';`
+
+- Save the file.
+
+Step 2: Run again
+
+- Return to the terminal.
+- Run:
+  - `npm start`
+  - or `node index.js`
+
+The scraper will now fetch jobs using the new configuration.
+
+---
+
+Notes
+
+- Run sparingly. Do not run multiple scrapers at the same time.
+- Some websites may block automated access if requests are too frequent.
+- LinkedIn is intentionally not included due to strong anti-scraping protections.
+- If a website changes its page structure, the scraper may stop working until updated.
+- Always verify the output before using the data.
+
+---
+
+License
+
+MIT License.
+
+You are free to use, modify, and share this project.

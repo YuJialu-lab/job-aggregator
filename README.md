@@ -62,7 +62,7 @@ Step 1: Change job title and location
 - Change them to your desired job and city, for example:
 
   `const query = 'UX Designer';`  
-  `const location = 'Munich';`
+  `const location = 'Hamburg';`
 
 - Save the file.
 
